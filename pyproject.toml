@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "nordvpn_switcher"
-version = "1.0.0"
+version = "1.0.1"
 
 [tool.setuptools.packages.find]
-where = ["."]
+where = ["nordvpn_switcher"]
 include = ["nordvpn_switcher*"]
