@@ -78,7 +78,7 @@ def get_ip():
     ip_check_websites = ['http://ip4only.me/api/',"https://api64.ipify.org/"]
     website_pick = random.choice(ip_check_websites)
     request_currentip = urllib.request.Request(url=website_pick, headers=headers)
-    ip = urllib.request.urlopen(request_currentip).read().decode('utf-8')
+    ip = urllib.request.urlopen(request_currentip, timeout=5).read().decode('utf-8')
     if website_pick == 'http://ip4only.me/api/':
         ip = re.search("IPv4,(.*?),Remaining", ip).group(1)
     return ip
