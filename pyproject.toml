@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "nordvpn_switcher"
+version = "1.0.0"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nordvpn_switcher*"]
